@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), 
+        где arg1, arg2 – значения аргументов, operation – строка с названием операции. 
+        В зависимости от переданного значения операции выполнить одну из арифметических операций
+        (использовать функции из пункта 3) и вернуть полученное значение (использовать switch).*/
+
+        operation=prompt('Введите операцию (summ или diff или quot): ');
+        x=+prompt('Введите первое число ');
+        y=+prompt('Введите второе число ');
+
+        function mathOperation(arg1, arg2, operation) {
+            switch (operation) {
+                case 'summ':
+                    s=arg1+arg2;
+                    return s;
+                    break;
+
+                case 'diff':
+                    d=arg1-arg2;
+                    return d;
+                    break;
+
+                case 'quot':
+                    q=arg1/arg2;
+                    return q;
+                    break;                
+            }
+        }
+        a=mathOperation(x,y,operation);
+        alert(a);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
