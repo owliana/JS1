@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        let arr=Array();
+        let item=0;
+        let number=2;
+
+        /*for (let i=2;i<101;i++) {
+            arr.push(i);
+        }        
+
+        for (let item=0;item<arr.length;item++) {
+            for (let j=2;j<10;j++){
+                if ((arr[item]%j==0)&&(arr[item]>j)) {
+                    delete arr[item];
+                }   
+            }
+        }*/
+
+        while(number<101){
+            arr.push(number);
+            number++; //Создаю массив чисел;                
+        }  
+
+        while (item<arr.length){
+            let divider=2;
+            while (divider<10){ //Сокращаю число делителей до 9;
+                if ((arr[item]%divider==0)&&(arr[item]>divider)) { //Удаляю число из массива, если остаток от деления ==0, и если число > делителя;
+                //delete arr[item];
+                arr.splice(item,1); //Начиная с позиции item, удалить 1 элемент;
+                } 
+                divider++;
+            }
+                item++;
+        }     
+        
+        document.write(arr);
+         
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
