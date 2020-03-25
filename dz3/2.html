@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let cart=Array(); //Это корзина;
+        let numberPurch=cart.length;
+        let total=0;        
+
+        function countCartPrice (numberPurch) {
+            for(i=0;i<numberPurch;i++) {
+            total=total+cart[i];            
+            }
+            document.write(total);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
